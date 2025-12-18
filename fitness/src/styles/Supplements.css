@@ -1,0 +1,230 @@
+.supplements-section {
+  width: 100%;
+  padding: 80px 2rem;
+  background: linear-gradient(180deg, #151f3a 0%, #0d1425 100%);
+
+}
+
+.supplements-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+}
+
+.supplements-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.trust-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 50px 0;
+  flex-wrap: wrap;
+}
+
+.trust-icon-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 2px solid rgba(0, 212, 255, 0.4);
+  border-radius: 12px;
+  color: #00d4ff;
+  font-weight: 700;
+  animation: fadeInUp 0.6s ease;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+.trust-icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.supplements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  margin-top: 50px;
+}
+
+.supplement-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.supplement-card {
+  background: linear-gradient(135deg, rgba(10, 15, 31, 0.6) 0%, rgba(5, 10, 20, 0.9) 100%);
+  border-radius: 20px;
+  padding: 30px;
+  border: 2px solid rgba(0, 212, 255, 0.2);
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.6s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.supplement-card:hover {
+  border-color: rgba(0, 212, 255, 0.6);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 212, 255, 0.3), inset 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+.supplement-image {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  transition: all 0.4s ease;
+}
+
+.supplement-card:hover .supplement-image {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.supplement-name {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.supplement-badges {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.supplement-badge {
+  padding: 6px 12px;
+  background: rgba(0, 212, 255, 0.15);
+  color: #00d4ff;
+  border: 1px solid rgba(0, 212, 255, 0.5);
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
+}
+
+.supplement-rating {
+  color: #00d4ff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+}
+
+.supplement-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 149, 0, 0.1);
+}
+
+.supplement-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00d4ff, #0099ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.6));
+}
+
+.supplement-card .add-cart-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #00d4ff, #0099ff);
+  color: #000000;
+  border: none;
+  border-radius: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.supplement-card .add-cart-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.5), 0 0 25px rgba(0, 212, 255, 0.6);
+}
+
+/* Responsive Supplements */
+@media (max-width: 1024px) {
+  .supplements-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .trust-icons {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .supplements-section {
+    padding: 60px 1.5rem;
+  }
+
+  .supplements-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .trust-icons {
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .supplement-card {
+    padding: 25px;
+  }
+
+  .supplement-image {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .supplements-section {
+    padding: 40px 1rem;
+  }
+
+  .supplement-image {
+    font-size: 2.5rem;
+  }
+
+  .supplement-name {
+    font-size: 1.1rem;
+  }
+
+  .supplement-price {
+    font-size: 1.3rem;
+  }
+
+  .supplement-footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .supplement-card .add-cart-btn {
+    width: 100%;
+  }
+}
