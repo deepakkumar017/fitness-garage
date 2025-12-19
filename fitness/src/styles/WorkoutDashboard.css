@@ -1,0 +1,287 @@
+.workout-dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.workout-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.workout-header h1 {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.workout-header p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.active-plan-section {
+  margin-bottom: 50px;
+}
+
+.active-plan-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.plan-status {
+  flex: 1;
+}
+
+.plan-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.plan-progress h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.5rem;
+}
+
+.week-progress {
+  margin-top: 15px;
+}
+
+.progress-bar {
+  width: 300px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: white;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.week-progress p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.plan-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.plan-actions .btn {
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.filters-section {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.filters-section h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.filter-group {
+  margin-bottom: 25px;
+}
+
+.filter-group h3 {
+  margin: 0 0 12px 0;
+  color: #333;
+  font-size: 1rem;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 16px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  color: #333;
+}
+
+.filter-btn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.plan-card {
+  background: white;
+  border: 2px solid #eee;
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+  transform: translateY(-5px);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.plan-emoji {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.plan-card h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.plan-level {
+  margin: 0;
+  color: #667eea;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.plan-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.info-item .label {
+  font-weight: 600;
+}
+
+.info-item .value {
+  color: #667eea;
+  font-weight: 700;
+}
+
+.plan-description {
+  color: #666;
+  margin: 0 0 20px 0;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.plan-goals {
+  margin-bottom: 20px;
+}
+
+.plan-goals h4 {
+  margin: 0 0 10px 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.plan-goals ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plan-goals li {
+  padding: 6px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.plan-card .btn {
+  width: 100%;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: auto;
+}
+
+.no-plans {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .active-plan-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .progress-bar {
+    width: 100%;
+  }
+
+  .plan-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .workout-header h1 {
+    font-size: 2rem;
+  }
+}

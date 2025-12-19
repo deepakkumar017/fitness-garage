@@ -1,0 +1,211 @@
+.payment-form {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.payment-amount {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.payment-amount p {
+  margin: 0 0 10px 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.payment-amount h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #667eea;
+}
+
+.payment-methods-section {
+  margin-bottom: 30px;
+}
+
+.payment-methods-section h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.payment-method-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payment-method-option:hover {
+  border-color: #667eea;
+  background: #f9f9f9;
+}
+
+.payment-method-option input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+.payment-method-option span {
+  font-weight: 600;
+  color: #333;
+}
+
+.payment-method-option input[type="radio"]:checked + span {
+  color: #667eea;
+}
+
+.card-payment-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.card-payment-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.card-payment-form label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.card-payment-form input {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: monospace;
+  transition: border-color 0.2s;
+}
+
+.card-payment-form input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.card-payment-form input.input-error {
+  border-color: #c00;
+  background: #fee;
+}
+
+.error-text {
+  color: #c00;
+  font-size: 0.85rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.security-notice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.security-notice span {
+  font-size: 1.2rem;
+}
+
+.security-notice p {
+  margin: 0;
+  color: #155724;
+  font-size: 0.9rem;
+}
+
+.upi-payment-form,
+.netbanking-payment-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.payment-instruction {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+  padding: 20px;
+}
+
+.payment-button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.payment-security {
+  background: white;
+  padding: 16px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.payment-security p {
+  margin: 6px 0;
+  color: #4caf50;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.error-message {
+  background: #fee;
+  color: #c00;
+  padding: 12px 14px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  border-left: 4px solid #c00;
+}
+
+@media (max-width: 768px) {
+  .payment-form {
+    padding: 20px;
+  }
+
+  .payment-amount h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-method-option {
+    padding: 12px;
+  }
+
+  .payment-method-option span {
+    font-size: 0.9rem;
+  }
+}

@@ -2,14 +2,17 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getProductById } from '../data/products';
 import '../styles/ProductDetail.css';
 import { useState } from 'react';
+import { useCart } from '../context/CartContext';
 
 export default function ProductDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const product = getProductById(id);
+  const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState(product?.sizes?.[0] || null);
   const [selectedColor, setSelectedColor] = useState(product?.colors?.[0] || null);
+  const [addedToCart, setAddedToCart] = useState(false);
 
   if (!product) {
     return (
@@ -25,7 +28,9 @@ export default function ProductDetail() {
   }
 
   const handleAddToCart = () => {
-    alert(`Added ${quantity} x ${product.name} to cart!`);
+    addToCart(product, quantity, selectedSize, selectedColor);
+    setAddedToCart(true);
+    setTimeout(() => setAddedToCart(false), 2000);
   };
 
   return (
@@ -136,7 +141,7 @@ export default function ProductDetail() {
             onClick={handleAddToCart}
             disabled={!product.inStock}
           >
-            {product.inStock ? '🛒 Add to Cart' : 'Out of Stock'}
+            {addedToCart ? '✓ Added to Cart!' : product.inStock ? '🛒 Add to Cart' : 'Out of Stock'}
           </button>
 
           {/* Product Details Tabs */}
